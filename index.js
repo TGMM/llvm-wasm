@@ -1,4 +1,4 @@
-import { init, WASI } from 'https://esm.sh/@wasmer/wasi@1.1.2'
+import { init, WASI } from 'https://esm.sh/@wasmer/wasi@1.2.2'
 import Llc from './llc.js'
 import Lld from './lld.js'
 
@@ -19,7 +19,7 @@ export const compileAndRun = async (mainLl) => {
         '-lc',
         '-lc++',
         '-lc++abi',
-        '/lib/clang/14.0.6/lib/wasi/libclang_rt.builtins-wasm32.a',
+        '/lib/clang/16.0.4/lib/wasi/libclang_rt.builtins-wasm32.a',
         '/lib/wasm32-wasi/crt1.o',
         'main.o',
         '-o',
